@@ -1,0 +1,63 @@
+//--变量
+$bg-color = #ebebed
+$card-bg-color = #ffffff
+$item-bg-color = #f7f7f9
+$theme-color = #2186e9
+$theme-color-h = #ACD3FA
+$mark-color = #de483d
+$border-color = #f1f1f1
+$color = #24282e
+$sub-color = #717677
+
+$topic-bg-color = #f8f9fb
+
+//--前缀
+prefix(prop, args) {
+  -ms-{prop} args
+  -webkit-{prop} args
+  -moz-{prop} args
+  {prop} args
+}
+
+//--通用
+b-box-shadow() {
+  prefix('box-shadow', arguments)
+}
+
+b-border-radius() {
+  prefix('border-radius', arguments)
+}
+
+b-box-sizing() {
+  prefix('box-sizing', arguments)
+}
+
+b-transform() {
+  prefix('transform', arguments)
+}
+
+b-transform-origin() {
+  prefix('transform-origin', arguments)
+}
+
+b-transition() {
+  prefix('transition', arguments);
+}
+
+b-word-hidden() {
+  overflow hidden
+  text-overflow ellipsis
+  white-space nowrap
+}
+
+b-word-row-hidden(arguments) {
+  overflow hidden
+  text-overflow ellipsis
+  display -webkit-box
+  -webkit-line-clamp arguments
+  -webkit-box-orient vertical
+}
+
+b-animation() {
+  prefix('animation', arguments)
+}

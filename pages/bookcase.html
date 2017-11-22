@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <meta name="apple-itunes-app" content="app-id=791086961"/>
+  <title>Bookcase</title>
+  <link rel="stylesheet" href="assets/css/common.css">
+  <link rel="stylesheet" href="assets/css/bookcase.css">
+  <script src="assets/js/resetFontSize.js?760&100"></script>
+</head>
+
+<body>
+
+<div class="container">
+  <header class="bookcase-header hide">
+    <div class="header-left">编辑</div>
+    <div class="header-title">书架</div>
+    <div class="header-right">书城</div>
+  </header>
+  <div class="content">
+    <div class="search-box active">
+      <!-- 点击搜索时:
+      header：hide
+      nav: hide
+      search-box: active
+      bookcase-list: search-list，数据更换成只有书籍
+      add-book: hide
+      book-count: hide
+      -->
+      <div class="inactive-search">
+        <h6 class="search"><i class="search-icon"></i><span class="search-text">搜索</span></h6>
+      </div>
+      <div class="active-search">
+        <h4 class="search"><i class="search-icon"></i><span class="search-text hide">搜索</span><input
+            class="search-input" placeholder="搜索" type="text"><i class="close-search hide "></i></h4>
+        <button class="cancel">取消</button>
+        <div class="sort">
+          <h5 class="active sort-type">默认</h5>
+          <h5 class="sort-type">按进度</h5>
+          <h5 class="sort-type">按购买</h5>
+        </div>
+      </div>
+    </div>
+    <div class="bookcase-list search-list">
+      <div class="bookcase-item">
+        <div class="book"></div>
+        <h6 class="title">自控力</h6>
+        <h6 class="des">凯里·麦格尼格尔</h6>
+      </div>
+      <div class="bookcase-item">
+        <div class="book book-box">
+          <div class="book-item"></div>
+          <div class="book-item"></div>
+          <div class="book-item"></div>
+          <div class="book-item"></div>
+        </div>
+        <h6 class="title">自控力</h6>
+      </div>
+      <div class="bookcase-item">
+        <div class="book book-box">
+          <div class="book-item"></div>
+        </div>
+        <h6 class="title">自控力自控力自控力自控力自控力自控力</h6>
+      </div>
+      <div class="bookcase-item">
+        <div class="book book-box">
+          <div class="book-item"></div>
+          <div class="book-item"></div>
+          <div class="book-item"></div>
+          <div class="book-item"></div>
+          <div class="book-item"></div>
+          <div class="book-item"></div>
+          <div class="book-item"></div>
+          <div class="book-item"></div>
+          <div class="book-item"></div>
+        </div>
+        <h6 class="title">自控力</h6>
+      </div>
+      <div class="bookcase-item">
+        <div class="book"></div>
+        <h6 class="title">自控力</h6>
+      </div>
+      <div class="bookcase-item">
+        <div class="book"></div>
+        <h6 class="title">自控力</h6>
+      </div>
+      <div class="bookcase-item">
+        <div class="book"></div>
+        <h6 class="title">自控力</h6>
+      </div>
+      <div class="bookcase-item">
+        <div class="book"></div>
+        <h6 class="title">自控力</h6>
+      </div>
+      <div class="bookcase-item">
+        <div class="book"></div>
+        <h6 class="title">自控力</h6>
+      </div>
+      <div class="bookcase-item">
+        <div class="book"></div>
+        <h6 class="title">自控力</h6>
+      </div>
+      <div class="bookcase-item add-book hide">
+      </div>
+      <h6 class="book-count hide">72本公开阅读 · 0本私密阅读</h6>
+    </div>
+  </div>
+  <nav class="hide">
+    <div class="nav-item active">
+      <i class="nav-icon find"></i>
+      <p class="nav-text">发现</p>
+    </div>
+    <div class="nav-item">
+      <i class="nav-icon bookcase"></i>
+      <p class="nav-text">书架</p>
+    </div>
+    <div class="nav-item">
+      <i class="nav-icon idea"></i>
+      <p class="nav-text">想法</p>
+    </div>
+    <div class="nav-item">
+      <i class="nav-icon user"></i>
+      <p class="nav-text">我</p>
+    </div>
+  </nav>
+</div>
+</body>
+</html>

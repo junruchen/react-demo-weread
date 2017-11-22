@@ -1,0 +1,112 @@
+@import './base/'
+
+.container {
+  height 100%
+  display flex
+  flex-direction column
+}
+
+header {
+  position relative
+  width 100%
+  height .65rem
+  font-size .3rem
+  & .header-title {
+    line-height .65rem
+    text-align center
+    font-weight 500
+  }
+  & .header-right, & .header-left {
+    position absolute
+    top 0
+    bottom 0
+    line-height .63rem
+    b-transition(color 1s)
+  }
+  & .header-right {
+    right 0
+    padding-right 0.35rem
+  }
+  & .header-left {
+    left 0
+    padding-left 0.35rem
+  }
+}
+
+nav {
+  display flex
+  width 100%
+  height .85rem
+  justify-content space-between
+  padding 0 .63rem
+  background-color $card-bg-color
+  border-top 1px solid $border-color
+  & .nav-item {
+    display flex
+    flex-direction column
+    padding 0 .07rem
+    font-size .18rem
+    text-align center
+    &.active {
+      color $theme-color
+      & .nav-icon {
+        &.find {
+          background-image url("../img/find_h.png")
+        }
+        &.bookcase {
+          background-image url("../img/bookcase_h.png")
+        }
+        &.idea {
+          background-image url("../img/idea_h.png")
+        }
+        &.user {
+          background-image url("../img/user_h.png")
+        }
+      }
+    }
+    & .nav-icon {
+      flex 1
+      min-width .4rem
+      display inline-block
+      background-repeat no-repeat
+      background-position center
+      background-size .4rem
+      &.find {
+        background-image url("../img/find.png")
+      }
+      &.bookcase {
+        background-image url("../img/bookcase.png")
+      }
+      &.idea {
+        background-image url("../img/idea.png")
+      }
+      &.user {
+        background-image url("../img/user.png")
+      }
+    }
+  }
+}
+
+.content {
+  flex 1
+  overflow-y scroll
+}
+
+// components
+.btn {
+  width 4.94rem
+  padding .16rem 0
+  b-border-radius(.04rem)
+  color $card-bg-color
+  background-color $theme-color
+  & .btn-sub-text {
+    opacity .8
+    padding-top 0.1rem
+  }
+  &.btn-line {
+    b-border-radius(.5rem)
+    color $theme-color
+    background-color $card-bg-color
+    border 1px solid $theme-color
+  }
+}

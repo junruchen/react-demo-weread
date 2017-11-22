@@ -1,0 +1,468 @@
+@import './base/methods.styl'
+
+.find-header {
+  & .header-right {
+    & .divider-line {
+      color $mark-color
+    }
+  }
+}
+
+.find-content {
+  width 5.94rem * 10 + .28rem * 9 + .63rem * 2
+  height 100%
+  padding .22rem 0 .28rem
+  & .card-item {
+    position relative
+    float left
+    width 5.94rem
+    height 100%
+    margin-left .28rem
+    background-color $card-bg-color
+    b-box-shadow(0 0 1px 0 rgba(0, 0, 0, .15))
+    b-border-radius(.1rem)
+    &:first-child {
+      margin-left .63rem
+    }
+    &.read-card {
+      text-align center
+      & .book-info {
+        padding .84rem 0 0
+        & .book-cover {
+          height 3.42rem
+          margin 0 auto
+          background-image url("../img/book.png")
+          background-size 2.38rem 3.42rem
+          background-position center
+          background-repeat no-repeat
+        }
+        & .book-name {
+          max-height 1.66rem
+          padding .32rem .35rem .16rem
+          b-word-row-hidden(2)
+        }
+      }
+      & .user-info {
+        position absolute
+        width 100%
+        color $sub-color
+        bottom .65rem
+        & .user-icon {
+          width .72rem
+          height .72rem
+          margin 0 auto
+          background-image url("../img/usericon.jpg")
+          background-size .72rem .72rem
+          background-repeat no-repeat
+          b-border-radius(50%)
+        }
+        & .user-name {
+          padding .3rem 0 .4rem
+        }
+      }
+    }
+    &.find-card {
+      padding-top .97rem
+      text-align center
+      & .find-bg {
+        width 100%
+        height 3.1rem
+        background-image url("../img/find_bg.png")
+        background-size contain
+        background-position center
+        background-repeat no-repeat
+      }
+      & .find-title {
+        color $theme-color
+        padding-top .41rem
+      }
+      & .btn {
+        width 4.3rem
+        position absolute
+        bottom .97rem
+        left 50%
+        margin-left -2.15rem
+      }
+    }
+    &.hot-card {
+      text-align center
+      padding-top .62rem
+      & .hot-book {
+        padding-top .45rem
+        & .book-cover {
+          height 2.5rem
+          background-image url("../img/book.png")
+          background-size 1.74rem 2.5rem
+          background-repeat no-repeat
+          background-position center
+        }
+        & .book-name {
+          max-height 1.185rem
+          padding .24rem .35rem .16rem
+          b-word-row-hidden(2)
+        }
+      }
+      & .other-hot-book {
+        position absolute
+        width 100%
+        left 0
+        bottom .56rem
+        text-align center
+        & .book-list {
+          display flex
+          justify-content space-between
+          flex-wrap nowrap
+          padding 0 .56rem .56rem
+          & .book-item {
+            width 1.26rem
+            & .book-cover {
+              height 1.82rem
+              background-image url("../img/book.png")
+              background-size 1.26rem 1.82rem
+              background-repeat no-repeat
+              background-position center
+            }
+            & .book-name {
+              height .86rem
+              padding .2rem .06rem 0rem
+              b-word-row-hidden(2)
+            }
+          }
+        }
+      }
+    }
+    &.topic-card {
+      padding .5rem 0 .5rem .5rem
+      & .topic {
+        display flex
+        padding .34rem .34rem .34rem
+        padding-right .4rem
+        background-color $topic-bg-color
+        & .topic-content {
+          padding-right .45rem
+          & .topic-title {
+            padding .2rem 0 .1rem
+          }
+        }
+        & .topic-icon {
+          width .88rem
+          height 2.09rem
+          background-image url("../img/topic_icon.png")
+          background-position center
+          background-repeat no-repeat
+          background-size contain
+        }
+      }
+      & .comment {
+        display flex
+        padding-right .5rem
+        padding-top .3rem
+        &:first-child {
+          background red
+        }
+        & .user-icon {
+          b-border-radius(50%)
+          width .65rem
+          height .65rem
+          margin-right .28rem
+          background-image url("../img/usericon.jpg")
+          background-position center
+          background-size cover
+          background-repeat no-repeat
+        }
+        & .comment-box {
+          display flex
+          position relative
+          width 3.8rem
+          padding .24rem
+          background-color $topic-bg-color
+          &:before {
+            position absolute
+            content ''
+            width .2rem
+            height .2rem
+            top .25rem
+            left -.1rem
+            b-transform rotate(45deg)
+            background-color $topic-bg-color
+          }
+          & .comment-content {
+            flex 1
+            overflow hidden
+            & .comment-text {
+              font-size .2rem
+              b-word-hidden()
+            }
+          }
+          & .voice-icon {
+            width .22rem
+            height 100%
+            flex-shrink 0
+            margin-left .2rem
+            background-image url("../img/voice-icon.png")
+            background-size .22rem
+            background-repeat no-repeat
+            background-position center
+          }
+        }
+        &.comment-right {
+          & .user-icon {
+            margin-right 0
+            margin-left .28rem
+          }
+          & .comment-box {
+            &:before {
+              left 100%
+              margin-left -.1rem
+            }
+            & .voice-icon {
+              margin-right .2rem
+              margin-left 0
+            }
+          }
+        }
+      }
+      & .btn {
+        margin-top .35rem
+      }
+    }
+    &.money-card {
+      padding-top .67rem
+      text-align center
+      color $theme-color
+      & .money-title {
+        height 1.3rem
+        padding-top .45rem
+        text-align center
+        background-image url("../img/money_bg_1.png")
+        background-position center
+        background-repeat no-repeat
+        background-size cover
+      }
+      & .money-content {
+        height 4.95rem
+        background-image url("../img/money_bg_2.png")
+        background-position center
+        background-repeat no-repeat
+        background-size cover
+        & .money {
+          padding-top 1.45rem
+          font-size .95rem
+        }
+      }
+      & .btn-group {
+        position absolute
+        bottom .78rem
+        & .btn:first-child {
+          margin-bottom .3rem
+        }
+      }
+    }
+    &.recommend-card {
+      padding .6rem .5rem 0
+      & .recommend-title {
+        color $theme-color
+        text-align center
+        height 1.28rem
+        padding-top .3rem
+        background-image url("../img/recommend_bg.png")
+        background-repeat no-repeat
+        background-position center
+        background-size cover
+      }
+      & .recommend-list {
+        display flex
+        flex-wrap wrap
+        justify-content space-between
+        padding-top .32rem
+        & .book {
+          width 1.42rem
+          padding-top .32rem
+          & .book-cover {
+            height 2.05rem
+            background-image url("../img/book.png")
+            background-repeat no-repeat
+            background-position center
+            background-size cover
+          }
+          & .book-name {
+            height .9rem
+            padding-top .18rem
+            b-word-row-hidden(2)
+          }
+        }
+      }
+      & .btn {
+        position absolute
+        width 4.12rem
+        padding .3rem 0
+        bottom .62rem
+        left 50%
+        margin-left -2.06rem
+      }
+    }
+    &.radio-card {
+      display flex
+      flex-direction column
+      & .radio-bg {
+        flex 1
+        b-border-radius(0.1rem 0.1rem 0 0)
+        background-image url("../img/radio_bg.png")
+        background-repeat no-repeat
+        background-position center
+        background-size cover
+      }
+      & .radio {
+        text-align right
+        padding .46rem .38rem .5rem 0
+        & .radio-des {
+          padding-bottom .22rem
+        }
+      }
+    }
+    &.share-card {
+      text-align center
+      padding .6rem .5rem 0
+      & .share-des {
+        color $sub-color
+        padding .3rem 0 .12rem
+      }
+      & .share-list {
+        display flex
+        flex-wrap wrap
+        justify-content space-between
+        & .book {
+          width 1.4rem
+          padding-top .56rem
+          & .book-cover {
+            height 2rem
+            background-image url("../img/book.png")
+            background-repeat no-repeat
+            background-position center
+            background-size cover
+          }
+          & .book-name {
+            height .9rem
+            padding .18rem .1rem 0
+            b-word-row-hidden(2)
+          }
+        }
+      }
+      & .btn {
+        position absolute
+        bottom .6rem
+        left 50%
+        margin-left -2.47rem
+      }
+    }
+    &.friend-card {
+      padding .5rem 0 0.46rem
+      & .friend-title {
+        position relative
+        text-align center
+        color $sub-color
+        margin-bottom 1.08rem
+        &:before {
+          position absolute
+          content ''
+          width .44rem
+          height .06rem
+          top 100%
+          left 50%
+          background-color $sub-color
+          margin-left -.22rem
+          margin-top .22rem
+        }
+      }
+      & .friends {
+        position relative
+        height 6.05rem
+        & .friend-item {
+          position absolute
+          text-align center
+          font-size 0
+          & .user-icon {
+            margin 0 auto
+            b-border-radius(50%)
+            background-image url("../img/usericon.jpg")
+            background-size cover
+            background-position center
+            background-repeat no-repeat
+          }
+          & .user-name {
+            max-width 2.1rem
+            height .52rem
+            b-word-hidden()
+            padding .12rem 0 .1rem
+          }
+          & .user-des {
+            display inline-block
+            color $card-bg-color
+            padding .05rem .15rem
+            background-color $theme-color
+            b-border-radius(.2rem)
+          }
+          &.friend1 {
+            top 0
+            left 1.69rem
+            & .user-icon {
+              width 1.62rem
+              height 1.62rem
+            }
+          }
+          &.friend2 {
+            top 1.5rem
+            right .65rem
+            & .user-icon {
+              width 1.24rem
+              height 1.24rem
+            }
+          }
+          &.friend3 {
+            top 2.8rem
+            left .6rem
+            & .user-icon {
+              width 1.3rem
+              height 1.3rem
+            }
+          }
+          &.friend4 {
+            bottom 0
+            right 1.45rem
+            & .user-icon {
+              width 1.05rem
+              height 1.05rem
+            }
+          }
+        }
+      }
+      & .friend-num {
+        position absolute
+        width 100%
+        left 0
+        bottom 1.05rem
+        text-align center
+        color $theme-color
+        & span {
+          position relative
+          display inline-block
+          font-size .24rem
+          padding-left .06rem
+          &:before {
+            position absolute
+            content ''
+            width .08rem
+            height .08rem
+            left 100%
+            top 50%
+            margin-left .06rem
+            border 1px solid transparent
+            border-right-color $sub-color
+            border-top-color $sub-color
+            b-transform rotate(45deg) translateY(-50%)
+          }
+        }
+      }
+    }
+  }
+}

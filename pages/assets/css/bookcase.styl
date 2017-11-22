@@ -1,0 +1,177 @@
+@import './base/methods.styl'
+
+.bookcase-header {
+  background-color $card-bg-color
+// b-box-shadow(0 1px 1px 0 rgba(0, 0, 0, .1))
+  & .header-right, & .header-left {
+    color $theme-color
+  }
+}
+
+.content {
+  display flex
+  flex-direction column
+  background-color $card-bg-color
+  & .search-box {
+    text-align center
+    margin .22rem .3rem .48rem
+    color $sub-color
+    border 1px solid $border-color
+    & .active-search {
+      display none
+    }
+    & .inactive-search {
+      & .search {
+        height 0.7rem
+        line-height .7rem
+        & .search-icon {
+          display inline-block
+          width .21rem
+          height .21rem
+          margin-right .16rem
+          background-image url("../img/search.png")
+          background-position center
+          background-repeat no-repeat
+          background-size cover
+        }
+        & .close-search {
+          display inline-block
+          width .23rem
+          height .23rem
+          background-image url("../img/search_close.png")
+          background-position center
+          background-repeat no-repeat
+          background-size cover
+        }
+      }
+    }
+    &.active {
+      flex 1
+      border-color transparent
+      text-align left
+      & .inactive-search {
+        display none
+      }
+      & .active-search {
+        display block
+        & .search {
+          display inline-block
+          width 5.85rem
+          height .7rem
+          line-height .7rem
+          border 1px solid $border-color
+          & .search-icon {
+            margin-left .2rem
+          }
+          & .search-input {
+            width 80%
+            height 100%
+            vertical-align top
+          }
+        }
+        & .cancel {
+          color $theme-color
+        }
+        & .sort {
+          display flex
+          justify-content space-between
+          align-items stretch
+          color $sub-color
+          padding .34rem .56rem .16rem
+          & .sort-type {
+
+          }
+          & .active {
+            color $theme-color
+          }
+        }
+      }
+    }
+  }
+  & .bookcase-list {
+    display flex
+    flex-wrap wrap
+    align-content flex-start
+    padding 0 .2rem
+    &.search-list {
+      overflow scroll
+      & .bookcase-item {
+        & .title, & .des {
+          display block
+          height .45rem
+          b-word-hidden()
+        }
+        & .des {
+          height .4rem
+          padding-top .1rem
+          color $sub-color
+        }
+      }
+    }
+    & .bookcase-item {
+      width 1.6rem
+      margin 0 .33rem .44rem
+      & .book {
+        height 2.3rem
+        border 1px solid $border-color
+        b-border-radius(.02rem)
+        b-box-shadow(0 0 2px 0 rgba(0, 0, 0, .05))
+        background-image url("../img/book.png")
+        background-size cover
+        background-repeat no-repeat
+        background-position center
+        &.book-box {
+          display flex
+          flex-wrap wrap
+          align-content flex-start
+          padding .16rem .065rem
+          background $card-bg-color
+          & .book-item {
+            width .405rem
+            height .6rem
+            margin 0 .035rem .08rem
+            b-box-shadow(0 0 2px 0 rgba(0, 0, 0, .05))
+            background-image url("../img/book.png")
+            background-size contain
+            background-repeat no-repeat
+            background-position center
+          }
+        }
+      }
+      & .title {
+        height .78rem
+        padding-top .16rem
+        b-word-row-hidden(2)
+      }
+      &.add-book {
+        position relative
+        height 2.3rem
+        border 1px solid $border-color
+        b-border-radius(.02rem)
+        b-box-shadow(0 0 3px 0 rgba(0, 0, 0, .05))
+        &:before, &:after {
+          position absolute
+          content ''
+          top 50%
+          left 50%
+          b-transform(translate(-50%, -50%))
+          background-color $border-color
+        }
+        &:after {
+          width .46rem
+          height .04rem
+        }
+        &:before {
+          height .46rem
+          width .04rem
+        }
+      }
+    }
+  }
+  & .book-count {
+    width 100%
+    text-align center
+    color $sub-color
+    padding-bottom .44rem
+  }
+}
